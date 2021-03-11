@@ -1,7 +1,7 @@
 def bisection(haystack, needable):
     start = 0
     end = len(haystack)
-    while start >= end:
+    while start <= end:
         mid = (start + end ) // 2
         if haystack[mid] == needable:
             return mid
