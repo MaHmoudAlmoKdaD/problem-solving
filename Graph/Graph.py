@@ -31,5 +31,6 @@ class DirectedGraph:
     def remove_node(self, node):
         if node in self.nodes:
             self.nodes.remove(node)
-            del(def.edges[node])
+            del(self.edges[node])
+
 
