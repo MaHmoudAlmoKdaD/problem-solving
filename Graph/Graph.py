@@ -22,5 +22,14 @@ class DirectedGraph:
         #no need to do anything is the dest is already adjacent to  the src node
         if dest in adjacent_nodes: 
             return
+        # finally add the dest as an adjacent node to the src if everything else checks out
+        self.edges[src].append(dest) 
 
-     
+    def adjacent_nodes(self, node):
+        return self.edges.get(node, [])
+
+    def remove_node(self, node):
+        if node in self.nodes:
+            self.nodes.remove(node)
+            del(def.edges[node])
+
